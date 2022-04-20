@@ -1,15 +1,18 @@
 import { useState } from "react";
 
-function Done() {
+function Done({assignee}) {
 
     const [task, setTask] = useState({
-        name: "",
-        description: "",
-        status: "done",
+
+        assignee: assignee.name,
+        task: "",
+        status: "",
     });
 
     return (
       <h1>Done</h1>
+
+    //   display array of task marked "done" based on state change 
     );
   }
 

@@ -36,6 +36,11 @@ export default function Todo({ tasks, deleteTask }) {
                                     {task.description}</p>
                                 <p><label>Status:</label>
                                     {task.status}</p>
+                                {/* assignee field added to card  */}
+                                {/* buttun to delete task from state on click */}
+                                {/* button to move task to diffrent lane on click */}
+                                {/* move card on click and change state to "done" */}
+
                             </Card>
                         </Column>
                     </Container>

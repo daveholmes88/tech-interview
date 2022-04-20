@@ -25,9 +25,9 @@ const Card = styled.div`
 
 function App() {
 
-  const [done, setDone] = useState(false);
+  const [done, setDone] = useState([]);
+  const [assignee, setAssignee] = useState([]);
   const [todo, setTodo] = useState(false);
-  const [assignee, setAssignee] = useState("");
   const [tasks, updateTasks] = useState([]);
 
   const addTask = (task) => {
@@ -43,8 +43,8 @@ function App() {
     <>
     <Task addTask={addTask} />
     <Todo tasks={tasks} />
-    <Assignee />
-    <Done />
+    <Assignee tasks={tasks} />
+    <Done assignee={assignee} />
     
     </>
   );

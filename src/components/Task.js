@@ -6,6 +6,7 @@ export default function Task({ addTask }) {
     const [task, setTask] = useState({
         name: "",
         description: "",
+        assignee: "",
         status: "",
     });
 
@@ -45,6 +46,8 @@ export default function Task({ addTask }) {
                         onChange={handleChange}
 
                     />
+
+                    {/* add assignee dropdwon and assosiate with task */}
                     <input
                         type="text"
                         name="status"
@@ -55,6 +58,7 @@ export default function Task({ addTask }) {
                     />
                 </label>
                 <button>Create Task</button>
+                {/* add task to todo  by changing state status to "todo" on click*/}
             </form></>
     );
 }
