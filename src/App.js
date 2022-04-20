@@ -1,6 +1,10 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
 import uuid from 'react-uuid';
+import Assignee from './components/Assignee';
+import Task from './components/Task';
+import Todo from './components/Todo';
+import Done from './components/Done';
 
 const Container = styled.div`
     display: flex;
@@ -21,8 +25,28 @@ const Card = styled.div`
 
 function App() {
 
+  const [done, setDone] = useState(false);
+  const [todo, setTodo] = useState(false);
+  const [assignee, setAssignee] = useState("");
+  const [tasks, updateTasks] = useState([]);
+
+  const addTask = (task) => {
+    updateTasks([...tasks, task]);
+  };
+
+  
+
+
+
+
   return (
-    <h1>Hello World</h1>
+    <>
+    <Task addTask={addTask} />
+    <Todo tasks={tasks} />
+    <Assignee />
+    <Done />
+    
+    </>
   );
 }
 
